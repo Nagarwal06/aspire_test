@@ -3,53 +3,51 @@
 1. Python 3
 2. Selenium 
 3. Chrome WebDriver
+4. PyTest
 
 **Python Packages:**
 Make sure to install these packages before use case execution.
-Selenium
-Pytest
 
-Main goal of Aspire_test is to simplify the task of managing & running multiple tests with different combination of runtime parameters.
+
+**Objective:**
+Main goal of Aspire_test is to create test automation suite for application to mitigate human error and dependency. 
 
 **Architecture**
-* POM (Page Object Model)
-    * On the top you have the test cases, which call the page specific object.
-    * Page specific objects → are the libraries which are calling, for example, the LoginPage of Aspire_app
-
 * Product lib:
-    * covers the Libraries over the product features and business logic around the verification and validation
+    * It consists different page specific classes which consists product features and business logic.
+
+* POM (Page Object Model)
+    * Each functionality has specific test cases, which uses indiviual page specific object.
+    * Page specific objects → are the libraries having specific page functionalitites.
 
 * testcases:
-    *all test suite and test case
-    
-* aspire_app
-    * product_lib
-        * aspire_app
-            * lib
-                *  utility.py
-            *  pages
-                *  getwebdriver.py
-                *  InvetoryPage.py
-                *  LoginPage.py
-                *  ManufacturingPage.py
-                *  ProductPage.py
-            * gui_constants.py
-* test_cases
-    *  aspire_app
-        *  test
-            *  Place_Order_For_New_Product_Test.py
+    * All test suite and test cases to be executed for different features.
+  
+** Project Structure:**  
+   * aspire_app
+       * product_lib
+           * aspire_app
+               * lib
+                   *  utility.py
+               *  pages
+                  *  getwebdriver.py
+                  *  InvetoryPage.py
+                  *  LoginPage.py
+                  *  ManufacturingPage.py
+                  *  ProductPage.py
+               * gui_constants.py
+      * test_cases
+         *  aspire_app
+            *  test
+               *  Place_Order_For_New_Product_Test.py
 
 
 
 **Step-by-step guide**
-Following are the steps
-*	Make sure all the necessary packages are installed
+*	Make sure all necessary packages are installed.
 *	Go to testcases/aspire_app/test directory
 *	Open cmd as an administrator
-*	Run the command python Place_Order_For_New_Product_Test.py
-*	This will execute all the tests mentioned in .py file under folder testcases/aspire_app/test/
-
-
-
-
+*	Change the directory to project path i.e, aspire_test.
+*	Run the command "pytest -v -s testcases\aspire_app\test\test_place_order_for_new_product.py"
+*	This will execute all the tests mentioned in "test_place_order_for_new_product.py" file under folder testcases/aspire_app/test/
 
