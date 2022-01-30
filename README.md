@@ -50,4 +50,3 @@ Main goal of Aspire_test is to create test automation suite for application to m
 *	Change the directory to project path i.e, aspire_app. -> cd aspire_app.
 *	Run the command **"pytest -v -s testcases\aspire_app\test\test_place_order_for_new_product.py"**
 *	This will execute all the tests mentioned in "test_place_order_for_new_product.py" file under folder testcases/aspire_app/test/
-
